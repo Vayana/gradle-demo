@@ -1,0 +1,17 @@
+apply plugin: 'eclipse'
+apply plugin: 'scala'
+
+scalaVersion = '2.9.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Libraries needed to run the scala tools
+    scalaTools  'org.scala-lang:scala-compiler:' + scalaVersion,
+                'org.scala-lang:scala-library:' + scalaVersion
+
+    // Libraries needed for scala api
+    compile     'org.scala-lang:scala-library:' + scalaVersion
+}
