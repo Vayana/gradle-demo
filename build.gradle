@@ -15,3 +15,10 @@ dependencies {
     // Libraries needed for scala api
     compile     'org.scala-lang:scala-library:' + scalaVersion
 }
+
+task(run, dependsOn: 'classes', type: JavaExec) {
+    main = 'in.vayana.blog.gradle_demo.GradleDemo'
+    classpath = sourceSets.main.runtimeClasspath
+    args 'foo', 'bar'
+}
+
