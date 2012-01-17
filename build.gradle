@@ -17,6 +17,11 @@ dependencies {
     compile     'org.scala-lang:scala-library:' + scalaVersion,
                 'com.weiglewilczek.slf4s:slf4s_2.9.1:1.0.7',
                 'ch.qos.logback:logback-classic:1.0.0'
+
+    // Libraries needed for test cases
+    testCompile 'junit:junit:4.5',
+                'org.specs2:specs2_2.9.1:1.6.1',
+                'org.specs2:specs2-scalaz-core_2.9.1:6.0.1'
 }
 
 task(run, dependsOn: 'classes', type: JavaExec) {
